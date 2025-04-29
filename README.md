@@ -40,3 +40,4 @@ Future updates:
 - Allow the user to togle packs to get an amount of keys instead of just typing in an integer.
 
 Author: sgt slayer
+Feel free to message me on discord at **sgt_slayer3** if you have any questions or find any error

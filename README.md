@@ -16,7 +16,7 @@ Requirements:
 
 Installation:
 - git clone https://github.com/SgtSlayer3/Emporium-of-Enigma-Simulator.git
-  cd key-pearl-calculator
+  cd Emporium-of-Enigma-Simulator
 - python3 -m venv venv (otional)
   source venv/bin/activate (otional)
 - pip install -r requirements.txt

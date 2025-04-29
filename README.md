@@ -1,3 +1,5 @@
+DISCLAIMER: I probably screwed something up
+
 Project Structure:
 .
 ├── main.py                     # Main application entry point
@@ -36,3 +38,5 @@ Features:
 Future updates:
 - Calculate all rewards from keys.
 - Allow the user to togle packs to get an amount of keys instead of just typing in an integer.
+
+Author: sgt slayer

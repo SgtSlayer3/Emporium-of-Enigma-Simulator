@@ -214,9 +214,31 @@ class RewardsFromKeys(tk.Frame):
             return "Brown"
 
     def get_pearls(self, chest_type):
+        roll = random.uniform(0, 1)
         if chest_type == "Gold":
-            return 13.4 
+            if roll < 0.02:
+                return 100
+            elif roll < 0.08:
+                return 50
+            elif roll < 0.50:
+                return 20
+            else:
+                return 0
         elif chest_type == "Silver":
-            return 4.22
-        else:
-            return 1.752
+            if roll < 0.005:
+                return 100
+            elif roll < 0.065:
+                return 20
+            elif roll < 0.485:
+                return 6
+            else:
+                return 0
+        else:  # Brown
+            if roll < 0.003:
+                return 100
+            elif roll < 0.11:
+                return 6
+            elif roll < 0.515:
+                return 2
+            else:
+                return 0

@@ -158,6 +158,11 @@ class KeysNeededForPearls(tk.Frame):
         avg_pearls = sum(pearls_gained_list) / len(pearls_gained_list)
         ax.axvline(avg_pearls, color='red', linestyle='dashed', linewidth=2, label=f'Avg: {avg_pearls:.2f}')
 
+        percentiles = [1, 5, 10, 25, 50, 75, 90, 95, 99]
+        percentile_values = np.percentile(pearls_gained_list, percentiles)
+        for p, value in zip(percentiles, percentile_values):
+            ax.axvline(value, color='green', linestyle='dotted', linewidth=1, label=f'{p}%: {value:.0f}')
+
         ax.set_title("Keys Needed to reach target pearls")
         ax.set_xlabel("Keys")
         ax.set_ylabel("Number of Simulations")
@@ -202,9 +207,31 @@ class KeysNeededForPearls(tk.Frame):
             return "Brown"
 
     def get_pearls(self, chest_type):
+        roll = random.uniform(0, 1)
         if chest_type == "Gold":
-            return 13.4
+            if roll < 0.02:
+                return 100
+            elif roll < 0.08:
+                return 50
+            elif roll < 0.50:
+                return 20
+            else:
+                return 0
         elif chest_type == "Silver":
-            return 4.22
-        else:
-            return 1.752
+            if roll < 0.005:
+                return 100
+            elif roll < 0.065:
+                return 20
+            elif roll < 0.485:
+                return 6
+            else:
+                return 0
+        else:  # Brown
+            if roll < 0.003:
+                return 100
+            elif roll < 0.11:
+                return 6
+            elif roll < 0.515:
+                return 2
+            else:
+                return 0

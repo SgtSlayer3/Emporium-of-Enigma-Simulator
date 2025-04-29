@@ -15,7 +15,7 @@ Requirements:
 - numpy
 
 Installation:
-- git clone https://github.com/yourusername/key-pearl-calculator.git
+- git clone https://github.com/SgtSlayer3/Emporium-of-Enigma-Simulator.git
   cd key-pearl-calculator
 - python3 -m venv venv (otional)
   source venv/bin/activate (otional)

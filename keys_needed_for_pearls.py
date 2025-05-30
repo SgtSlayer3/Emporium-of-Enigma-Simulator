@@ -88,7 +88,7 @@ class KeysNeededForPearls(tk.Frame):
         for _ in range(simulations):
             pearls = 0
             keys_used = 0
-            free_refreshes_left = 18
+            free_refreshes_left = 21
             chests = [self.random_chest() for _ in range(9)]
 
             # Loop until the target pearls are reached

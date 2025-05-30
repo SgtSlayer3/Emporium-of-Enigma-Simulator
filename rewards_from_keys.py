@@ -88,7 +88,7 @@ class RewardsFromKeys(tk.Frame):
         for _ in range(simulations):
             keys_left = total_keys
             pearls = 0
-            free_refreshes_left = 18
+            free_refreshes_left = 21
             chests = [self.random_chest() for _ in range(9)]
 
             while keys_left >= 60:
